@@ -1,4 +1,4 @@
-python -m venv venv
+# python -m venv venv
 source venv/Scripts/activate
 pip list
 pip install pipenv
@@ -6,7 +6,7 @@ pipenv shell
 pipenv install --dev seaborn
 pipenv lock
 pipenv update
-pipenv requirements
+pipenv requirements > requirements.txt
 pip install -r requirements.txt
 pip list
 
