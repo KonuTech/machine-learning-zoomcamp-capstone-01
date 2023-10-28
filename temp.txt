@@ -4,7 +4,12 @@ pip list
 pip install pipenv
 pipenv shell
 pipenv install --dev seaborn
-# pipenv lock
+pipenv lock
+pipenv update
+pipenv requirements
+pip install -r requirements.txt
+pip list
+
 
 ls -lah
 # pip install notebook

@@ -5,10 +5,14 @@ name = "pypi"
 
 [packages]
 xgboost = "*"
+pyarrow = "*"
 
 [dev-packages]
 xgboost = "*"
 notebook = "*"
+pyarrow = "*"
+kaggle = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.9"
