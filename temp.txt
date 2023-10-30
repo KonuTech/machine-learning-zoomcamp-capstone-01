@@ -7,6 +7,7 @@ pipenv install --dev seaborn
 pipenv lock
 pipenv update
 pipenv requirements > requirements.txt
+pipenv requirements --dev > requirements_dev.txt
 pip install -r requirements.txt
 pip list
 
