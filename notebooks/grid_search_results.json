@@ -1,0 +1,10 @@
+[
+    {
+        "name": "LogisticRegression",
+        "f1": 0.8063856367395221,
+        "best_params": {
+            "classifier__C": 1.0,
+            "classifier__penalty": "l2"
+        }
+    }
+]

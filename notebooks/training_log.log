@@ -1,0 +1,12 @@
+2023-10-31 19:08:03,539 - root - INFO - Step 2: Training LogisticRegression classifier
+2023-10-31 19:08:03,540 - root - INFO - Step 3: Performing hyperparameter tuning
+2023-10-31 19:10:14,223 - root - INFO - Fitting 3 folds for each of 4 candidates, totalling 12 fits
+2023-10-31 19:10:14,228 - root - INFO - Step 4: Saving the best model for LogisticRegression as LogisticRegression_best_model.bin
+2023-10-31 19:10:14,338 - root - INFO - Step 5: Evaluating the best model on the validation set using F1 score
+2023-10-31 19:14:57,133 - root - INFO - Step 2: Training LogisticRegression classifier
+2023-10-31 19:14:57,134 - root - INFO - Step 3: Performing hyperparameter tuning
+2023-10-31 19:16:55,522 - root - INFO - Fitting 3 folds for each of 4 candidates, totalling 12 fits
+2023-10-31 19:16:55,525 - root - INFO - Step 4: Saving the best model for LogisticRegression as LogisticRegression_best_model.bin
+2023-10-31 19:16:55,614 - root - INFO - Step 5: Evaluating the best model on the validation set using F1 score
+2023-10-31 19:16:55,965 - root - INFO - Step 3: Training RandomForest classifier
+2023-10-31 19:16:55,965 - root - INFO - Step 4: Performing hyperparameter tuning
