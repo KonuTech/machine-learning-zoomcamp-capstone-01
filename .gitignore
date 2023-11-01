@@ -1,2 +1,3 @@
 venv/*
 data/*
+models/RandomForest_best_model.bin
