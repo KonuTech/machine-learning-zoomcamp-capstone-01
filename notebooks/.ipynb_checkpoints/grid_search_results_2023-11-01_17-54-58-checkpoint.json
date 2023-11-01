@@ -1,7 +1,7 @@
 [
     {
         "name": "LogisticRegression",
-        "f1": 0.8076172737713125,
+        "f1": 0.8121398245687973,
         "best_params": {
             "classifier__C": 1.0,
             "classifier__penalty": "l2"
@@ -9,7 +9,7 @@
     },
     {
         "name": "XGBoost",
-        "f1": 0.8316244184110684,
+        "f1": 0.8366332545615869,
         "best_params": {
             "classifier__max_depth": 5,
             "classifier__min_child_weight": 2,
