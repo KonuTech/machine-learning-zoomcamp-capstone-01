@@ -1,0 +1,43 @@
+2023-11-05 22:12:26,795 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-05 22:18:20,381 - root - INFO - Hyperparameter tuning for LogisticRegression completed.
+2023-11-05 22:18:20,381 - root - INFO - Selected Indices of Features for LogisticRegression: [ 2  3  4  6  7  8  9 10 13 14]
+2023-11-05 22:18:20,381 - root - INFO - Selected Features for LogisticRegression: ['B_20', 'B_23', 'B_3', 'B_4', 'B_7', 'B_9', 'D_44', 'D_48', 'D_74', 'D_75']
+2023-11-05 22:18:20,387 - root - INFO - Best Estimator for LogisticRegression: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('feature_selection',
+                 RFE(estimator=LogisticRegression(n_jobs=-1),
+                     n_features_to_select=10)),
+                ('classifier', LogisticRegression(n_jobs=-1))])
+2023-11-05 22:18:20,390 - root - INFO - Best model for LogisticRegression saved as LogisticRegression_2023-11-05_22-12-26.bin.
+2023-11-05 22:18:20,456 - root - INFO - Step 3: Evaluating the best model on the validation set using Gini coefficient
+2023-11-05 22:18:20,751 - root - INFO - Gini coefficient for LogisticRegression: 0.7737513790487356
+2023-11-05 22:18:20,751 - root - INFO - Step 2: Training XGBoost classifier
+2023-11-05 22:30:58,270 - root - INFO - Hyperparameter tuning for XGBoost completed.
+2023-11-05 22:30:58,270 - root - INFO - Selected Indices of Features for XGBoost: [ 0  2  4  5  7  8  9 10 11 14]
+2023-11-05 22:30:58,270 - root - INFO - Selected Features for XGBoost: ['B_16', 'B_20', 'B_3', 'B_38', 'B_7', 'B_9', 'D_44', 'D_48', 'D_55', 'D_75']
+2023-11-05 22:30:58,283 - root - INFO - Best Estimator for XGBoost: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('feature_selection',
+                 RFE(estimator=XGBClassifier(base_score=None, booster=None,
+                                             callbacks=None,
+                                             colsample_bylevel=None,
+                                             colsample_bynode=None,
+                                             colsample_bytree=None, device=None,
+                                             early_stopping_rounds=None,
+                                             enable_categorical=False,
+                                             eval_metric=None,
+                                             feature_types=None, gamma=None,
+                                             grow_policy=None,
+                                             i...
+                               feature_types=None, gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=None,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=5, max_leaves=None, min_child_weight=2,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=100, n_jobs=-1,
+                               num_parallel_tree=None, random_state=None, ...))])
+2023-11-05 22:30:58,293 - root - INFO - Best model for XGBoost saved as XGBoost_2023-11-05_22-12-26.bin.
+2023-11-05 22:30:58,447 - root - INFO - Step 4: Evaluating the best model on the validation set using Gini coefficient
+2023-11-05 22:30:58,885 - root - INFO - Gini coefficient for XGBoost: 0.8073749303303441
+2023-11-05 22:30:58,886 - root - INFO - Results saved to grid_search_results_2023-11-05_22-12-26.json.
+2023-11-05 22:30:58,886 - root - INFO - Log messages also printed to the console.
