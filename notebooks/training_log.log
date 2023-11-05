@@ -197,3 +197,211 @@
                                num_parallel_tree=None, random_state=None, ...))])
 2023-11-01 20:27:42,392 - root - INFO - Step 4: Saving the best model for XGBoost as XGBoost_2023-11-01_20-08-34.bin
 2023-11-01 20:27:42,587 - root - INFO - Step 5: Evaluating the best model on the validation set using Gini coefficient
+2023-11-02 16:48:32,871 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-02 16:48:32,871 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-02 17:00:26,414 - root - INFO - Selected Indices of Features for LogisticRegression: [ 2  3  4  6  7  8  9 10 13 14]
+2023-11-02 17:00:26,414 - root - INFO - Selected Features for LogisticRegression: ['B_20', 'B_23', 'B_3', 'B_4', 'B_7', 'B_9', 'D_44', 'D_48', 'D_74', 'D_75']
+2023-11-02 17:00:26,424 - root - INFO - Best Estimator for LogisticRegression: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('feature_selection',
+                 RFE(estimator=LogisticRegression(n_jobs=-1),
+                     n_features_to_select=10)),
+                ('classifier', LogisticRegression(n_jobs=-1))])
+2023-11-02 17:00:26,428 - root - INFO - Step 3: Saving the best model for LogisticRegression as LogisticRegression_2023-11-02_16-48-32.bin
+2023-11-02 17:00:26,595 - root - INFO - Step 4: Evaluating the best model on the validation set using Gini coefficient
+2023-11-02 17:00:26,976 - root - INFO - Step 2: Training XGBoost classifier
+2023-11-02 17:00:26,976 - root - INFO - Step 3: Performing hyperparameter tuning
+2023-11-02 17:26:32,363 - root - INFO - Selected Indices of Features for XGBoost: [ 0  2  4  5  7  8  9 10 11 14]
+2023-11-02 17:26:32,363 - root - INFO - Selected Features for XGBoost: ['B_16', 'B_20', 'B_3', 'B_38', 'B_7', 'B_9', 'D_44', 'D_48', 'D_55', 'D_75']
+2023-11-02 17:26:32,377 - root - INFO - Best Estimator for XGBoost: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('feature_selection',
+                 RFE(estimator=XGBClassifier(base_score=None, booster=None,
+                                             callbacks=None,
+                                             colsample_bylevel=None,
+                                             colsample_bynode=None,
+                                             colsample_bytree=None, device=None,
+                                             early_stopping_rounds=None,
+                                             enable_categorical=False,
+                                             eval_metric=None,
+                                             feature_types=None, gamma=None,
+                                             grow_policy=None,
+                                             i...
+                               feature_types=None, gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=None,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=5, max_leaves=None, min_child_weight=2,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=100, n_jobs=-1,
+                               num_parallel_tree=None, random_state=None, ...))])
+2023-11-02 17:26:32,386 - root - INFO - Step 4: Saving the best model for XGBoost as XGBoost_2023-11-02_16-48-32.bin
+2023-11-02 17:26:32,545 - root - INFO - Step 5: Evaluating the best model on the validation set using Gini coefficient
+2023-11-04 13:46:51,580 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-04 13:46:51,582 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-04 14:06:46,420 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-04 14:06:46,421 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-04 16:43:47,601 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-04 16:43:47,602 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-04 17:03:18,869 - root - INFO - Selected Indices of Features for LogisticRegression: [ 6  9 11 12 14 16 20 21 22 24]
+2023-11-04 17:03:18,869 - root - INFO - Selected Features for LogisticRegression: ['B_23', 'B_37', 'B_4', 'B_7', 'B_9', 'D_48', 'D_74', 'D_75', 'R_1', 'S_7']
+2023-11-04 17:03:18,876 - root - INFO - Best Estimator for LogisticRegression: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('scaler', MinMaxScaler()),
+                ('feature_selection',
+                 RFE(estimator=LogisticRegression(n_jobs=-1),
+                     n_features_to_select=10)),
+                ('classifier', LogisticRegression(n_jobs=-1))])
+2023-11-04 17:03:18,879 - root - INFO - Step 3: Saving the best model for LogisticRegression as LogisticRegression_2023-11-04_16-43-47.bin
+2023-11-04 17:03:18,970 - root - INFO - Step 4: Evaluating the best model on the validation set using Gini coefficient
+2023-11-04 17:03:19,394 - root - INFO - Step 2: Training XGBoost classifier
+2023-11-04 17:03:19,394 - root - INFO - Step 3: Performing hyperparameter tuning
+2023-11-04 17:37:10,309 - root - INFO - Selected Indices of Features for XGBoost: [ 0  7 12 13 14 15 16 21 22 23]
+2023-11-04 17:37:10,310 - root - INFO - Selected Features for XGBoost: ['B_1', 'B_3', 'B_7', 'B_8', 'B_9', 'D_44', 'D_48', 'D_75', 'R_1', 'S_3']
+2023-11-04 17:37:10,324 - root - INFO - Best Estimator for XGBoost: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('scaler', MinMaxScaler()),
+                ('feature_selection',
+                 RFE(estimator=XGBClassifier(base_score=None, booster=None,
+                                             callbacks=None,
+                                             colsample_bylevel=None,
+                                             colsample_bynode=None,
+                                             colsample_bytree=None, device=None,
+                                             early_stopping_rounds=None,
+                                             enable_categorical=False,
+                                             eval_metric=None,
+                                             feature_types=None, gam...
+                               feature_types=None, gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=None,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=5, max_leaves=None, min_child_weight=1,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=100, n_jobs=-1,
+                               num_parallel_tree=None, random_state=None, ...))])
+2023-11-04 17:37:10,335 - root - INFO - Step 4: Saving the best model for XGBoost as XGBoost_2023-11-04_16-43-47.bin
+2023-11-04 17:37:10,466 - root - INFO - Step 5: Evaluating the best model on the validation set using Gini coefficient
+2023-11-04 17:37:10,983 - root - INFO - Step 3: Training RandomForest classifier
+2023-11-04 17:37:10,983 - root - INFO - Step 4: Performing hyperparameter tuning
+2023-11-04 18:02:53,536 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-04 18:02:53,536 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-04 18:06:41,652 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-04 18:06:41,652 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-04 18:29:57,668 - root - INFO - Selected Indices of Features for LogisticRegression: [ 6  9 11 12 14 16 20 21 22 24]
+2023-11-04 18:29:57,669 - root - INFO - Selected Features for LogisticRegression: ['B_23', 'B_37', 'B_4', 'B_7', 'B_9', 'D_48', 'D_74', 'D_75', 'R_1', 'S_7']
+2023-11-04 18:29:57,675 - root - INFO - Best Estimator for LogisticRegression: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('scaler', MinMaxScaler()),
+                ('feature_selection',
+                 RFE(estimator=LogisticRegression(n_jobs=-1),
+                     n_features_to_select=10)),
+                ('classifier',
+                 LogisticRegression(C=0.1, n_jobs=-1, penalty='l1',
+                                    solver='saga'))])
+2023-11-04 18:29:57,678 - root - INFO - Step 3: Saving the best model for LogisticRegression as LogisticRegression_2023-11-04_18-06-41.bin
+2023-11-04 18:29:57,760 - root - INFO - Step 4: Evaluating the best model on the validation set using Gini coefficient
+2023-11-04 18:29:58,201 - root - INFO - Step 2: Training XGBoost classifier
+2023-11-04 18:29:58,201 - root - INFO - Step 3: Performing hyperparameter tuning
+2023-11-04 19:10:39,077 - root - INFO - Selected Indices of Features for XGBoost: [ 0  7 12 13 14 15 16 21 22 23]
+2023-11-04 19:10:39,077 - root - INFO - Selected Features for XGBoost: ['B_1', 'B_3', 'B_7', 'B_8', 'B_9', 'D_44', 'D_48', 'D_75', 'R_1', 'S_3']
+2023-11-04 19:10:39,090 - root - INFO - Best Estimator for XGBoost: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('scaler', MinMaxScaler()),
+                ('feature_selection',
+                 RFE(estimator=XGBClassifier(base_score=None, booster=None,
+                                             callbacks=None,
+                                             colsample_bylevel=None,
+                                             colsample_bynode=None,
+                                             colsample_bytree=None, device=None,
+                                             early_stopping_rounds=None,
+                                             enable_categorical=False,
+                                             eval_metric=None,
+                                             feature_types=None, gam...
+                               feature_types=None, gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=None,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=5, max_leaves=None, min_child_weight=1,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=100, n_jobs=-1,
+                               num_parallel_tree=None, random_state=None, ...))])
+2023-11-04 19:10:39,101 - root - INFO - Step 4: Saving the best model for XGBoost as XGBoost_2023-11-04_18-06-41.bin
+2023-11-04 19:10:39,231 - root - INFO - Step 5: Evaluating the best model on the validation set using Gini coefficient
+2023-11-04 19:10:39,752 - root - INFO - Step 3: Training RandomForest classifier
+2023-11-04 19:10:39,753 - root - INFO - Step 4: Performing hyperparameter tuning
+2023-11-05 01:05:51,675 - root - INFO - Selected Indices of Features for RandomForest: [ 0  6  7 12 13 14 15 16 21 23]
+2023-11-05 01:05:51,676 - root - INFO - Selected Features for RandomForest: ['B_1', 'B_23', 'B_3', 'B_7', 'B_8', 'B_9', 'D_44', 'D_48', 'D_75', 'S_3']
+2023-11-05 01:05:51,680 - root - INFO - Best Estimator for RandomForest: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('scaler', MinMaxScaler()),
+                ('feature_selection',
+                 RFE(estimator=RandomForestClassifier(n_jobs=-1),
+                     n_features_to_select=10)),
+                ('classifier',
+                 RandomForestClassifier(max_depth=6, min_samples_leaf=2,
+                                        min_samples_split=5, n_estimators=200,
+                                        n_jobs=-1))])
+2023-11-05 01:06:00,196 - root - INFO - Step 5: Saving the best model for RandomForest as RandomForest_2023-11-04_18-06-41.bin
+2023-11-05 01:06:00,274 - root - INFO - Step 6: Evaluating the best model on the validation set using Gini coefficient
+2023-11-05 11:33:33,855 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-05 11:33:33,858 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-05 11:40:49,536 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-05 11:40:49,536 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-05 11:48:00,504 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-05 11:48:00,504 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-05 11:51:26,285 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-05 11:51:26,287 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-05 11:56:16,739 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-05 11:56:16,739 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-05 13:37:17,272 - root - INFO - Selected Indices of Features for LogisticRegression: [ 1  2 10 15 16 17 18 19 22 30 31 32 33 39 64]
+2023-11-05 13:37:17,272 - root - INFO - Selected Features for LogisticRegression: ['B_23', 'B_3', 'B_38=4.0', 'B_7', 'B_9', 'D_114=0.0', 'D_114=1.0', 'D_114=nan', 'D_116=nan', 'D_117=nan', 'D_120=0.0', 'D_120=1.0', 'D_120=nan', 'D_48', 'D_75']
+2023-11-05 13:37:17,280 - root - INFO - Best Estimator for LogisticRegression: Pipeline(steps=[('imputer', SimpleImputer(strategy='median')),
+                ('scaler', MinMaxScaler()),
+                ('feature_selection',
+                 RFE(estimator=LogisticRegression(n_jobs=-1),
+                     n_features_to_select=15)),
+                ('classifier',
+                 LogisticRegression(n_jobs=-1, penalty='l1', solver='saga'))])
+2023-11-05 13:37:17,283 - root - INFO - Step 3: Saving the best model for LogisticRegression as LogisticRegression_2023-11-05_11-56-16.bin
+2023-11-05 13:37:23,486 - root - INFO - Step 4: Evaluating the best model on the validation set using Gini coefficient
+2023-11-05 13:37:25,200 - root - INFO - Step 2: Training XGBoost classifier
+2023-11-05 13:37:25,200 - root - INFO - Step 3: Performing hyperparameter tuning
+2023-11-05 13:42:34,706 - root - INFO - Step 1: Training XGBoost classifier
+2023-11-05 13:42:34,707 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-05 14:54:16,504 - root - INFO - Step 1: Training LogisticRegression classifier
+2023-11-05 14:54:16,505 - root - INFO - Step 2: Performing hyperparameter tuning
+2023-11-05 16:17:22,948 - root - INFO - Selected Indices of Features for LogisticRegression: [ 1 13 14 15 16 26 32 46 47 55]
+2023-11-05 16:17:22,952 - root - INFO - Selected Features for LogisticRegression: ['B_23', 'B_7', 'B_9', 'D_114=0.0', 'D_114=1.0', 'D_120=0.0', 'D_48', 'D_66=0.0', 'D_66=1.0', 'D_75']
+2023-11-05 16:17:22,962 - root - INFO - Best Estimator for LogisticRegression: Pipeline(steps=[('scaler', MinMaxScaler()),
+                ('feature_selection',
+                 RFE(estimator=LogisticRegression(n_jobs=-1),
+                     n_features_to_select=10)),
+                ('classifier',
+                 LogisticRegression(C=0.1, n_jobs=-1, penalty='l1',
+                                    solver='saga'))])
+2023-11-05 16:17:22,967 - root - INFO - Step 3: Saving the best model for LogisticRegression as LogisticRegression_2023-11-05_14-54-16.bin
+2023-11-05 16:17:23,598 - root - INFO - Step 4: Evaluating the best model on the validation set using Gini coefficient
+2023-11-05 16:17:24,064 - root - INFO - Step 2: Training XGBoost classifier
+2023-11-05 16:17:24,064 - root - INFO - Step 3: Performing hyperparameter tuning
+2023-11-05 18:10:17,663 - root - INFO - Selected Indices of Features for XGBoost: [ 7 14 15 26 31 32 42 43 54 55]
+2023-11-05 18:10:17,668 - root - INFO - Selected Features for XGBoost: ['B_38=2.0', 'B_9', 'D_114=0.0', 'D_120=0.0', 'D_44', 'D_48', 'D_64=None', 'D_64=O', 'D_68=6.0', 'D_75']
+2023-11-05 18:10:17,691 - root - INFO - Best Estimator for XGBoost: Pipeline(steps=[('scaler', MinMaxScaler()),
+                ('feature_selection',
+                 RFE(estimator=XGBClassifier(base_score=None, booster=None,
+                                             callbacks=None,
+                                             colsample_bylevel=None,
+                                             colsample_bynode=None,
+                                             colsample_bytree=0.8, device=None,
+                                             early_stopping_rounds=None,
+                                             enable_categorical=False,
+                                             eval_metric='auc',
+                                             feature_types=None, gamma=None,
+                                             grow_policy=None,
+                                             importance_type=None...
+                               feature_types=None, gamma=None, grow_policy=None,
+                               importance_type=None,
+                               interaction_constraints=None, learning_rate=None,
+                               max_bin=None, max_cat_threshold=None,
+                               max_cat_to_onehot=None, max_delta_step=None,
+                               max_depth=5, max_leaves=None, min_child_weight=1,
+                               missing=nan, monotone_constraints=None,
+                               multi_strategy=None, n_estimators=100, n_jobs=-1,
+                               num_parallel_tree=None, random_state=None, ...))])
+2023-11-05 18:10:17,706 - root - INFO - Step 4: Saving the best model for XGBoost as XGBoost_2023-11-05_14-54-16.bin
+2023-11-05 18:10:25,325 - root - INFO - Step 5: Evaluating the best model on the validation set using Gini coefficient

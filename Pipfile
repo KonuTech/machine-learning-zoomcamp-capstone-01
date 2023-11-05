@@ -5,12 +5,12 @@ name = "pypi"
 
 [packages]
 xgboost = "*"
-pyarrow = "*"
+flask = "*"
+scikit-learn = "*"
 
 [dev-packages]
 xgboost = "*"
 notebook = "*"
-pyarrow = "*"
 kaggle = "*"
 pandas = "*"
 matplotlib = "*"
