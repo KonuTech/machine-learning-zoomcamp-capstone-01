@@ -18,8 +18,8 @@ examples = [good_customer, bad_customer]
 for example in examples:
     response = requests.post(url, json=example).json()
     if response['customer_default'] == True:
-        print("\n", "Approved customer - ID: %s" % example["customer_ID"])
+        print("\n", "Not approved customer - ID: %s" % example["customer_ID"])
         print(response)
     else:
-        print("\n", "Not approved customer - ID: %s" % example["customer_ID"])
+        print("\n", "Approved customer - ID: %s" % example["customer_ID"])
         print(response)
