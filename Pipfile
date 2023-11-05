@@ -16,6 +16,8 @@ pandas = "*"
 matplotlib = "*"
 seaborn = "*"
 scikit-learn = "*"
+black = "*"
+isort = "*"
 
 [requires]
 python_version = "3.9"
