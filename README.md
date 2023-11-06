@@ -8,7 +8,7 @@ The goal of the project is to apply what we have learned during the course. This
 
 ## Dataset
 
-The dataset used to feed the MLOps pipeline was downloaded from [Kaggle](https://www.kaggle.com/competitions/amex-default-prediction).
+The dataset used to feed the ML Pipeline was downloaded from [Kaggle](https://www.kaggle.com/competitions/amex-default-prediction). You can download the dataset directly from there.
 
 Reading data in chunks was applied to handle the size of the training dataset, which is approximately 16 GB, and the test set, which is around 32 GB. For a more detailed approach, please check notebooks: [01_prepare_train_data](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/blob/main/notebooks/01_prepare_train_data.ipynb) and [05_prepare_test_data](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/blob/main/notebooks/05_prepare_test_data.ipynb)
 
@@ -16,11 +16,15 @@ The datasets itself were published by American Express as part of a prediction c
 
 My best submission achieved a Normalized Gini Coefficient score of 0.57895, which placed my Late Submission somewhere below the 4000th position out of more than 5000 in total. Could have done better.
 
-For insights about the exploratory data analysis (EDA) conducted, please refer to the notebook titled: [02_eda](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/blob/main/notebooks/02_eda.ipynb). The histograms, which have been prepared for nearly 200 columns, are saved [here](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/tree/main/eda/histogramsb). Feel free to explore them at your convenience.
+For insights about the exploratory data analysis (EDA) conducted, please refer to the notebook titled: [02_eda](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/blob/main/notebooks/02_eda.ipynb). The histograms, which have been prepared for nearly 200 columns, are saved [here](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/tree/main/eda/histograms). Feel free to explore them at your convenience.
 
 Due to the large dataset size, I decided to perform classifier training on a downsampled dataset where my binary target was resampled to have an equal distribution of 50% ones and 50% zeroes. For more insights about the downsampling process, please refer to the notebook titled: [03_downsample_data](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/blob/main/notebooks/03_downsample_data.ipynb).
 
-The experiments I conducted resulted in several different training runs, using Logistic Regression, RandomForest, and XGBoost algorithms. The models trained, along with logs and some artifacts, are saved [here](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/tree/main/models). The notebook that served as my workspace for these experiments is titled [04_get_champion_binary_classifier](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/blob/main/notebooks/04_get_champion_binary_classifier.ipynb). The final version of the training script .py is also available [here](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/blob/main/scripts/train.py). The best iteration of XGBoost model achieved a GINI score of 0.8074 on the training set. The test predictions were submitted to Kaggle, where the Normalized Gini Coefficient scored 0.57895.
+The experiments I conducted resulted in several different training runs, using Logistic Regression, RandomForest, and XGBoost algorithms. The models trained, along with logs and some artifacts, are saved [here](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/tree/main/models). Due to its training time and file size I have decided to exclude Random Forest models from current repository.
+
+As a preprocessing step, my pipeline replaces NULLs with median values. The feature selection process is performed using the scikit-learn RFE() method. Categorical variables were transformed using DictVectorizer(). Hyperparameters were fine-tuned using GridSearchCV().
+
+The notebook that served as my workspace for these experiments is titled [04_get_champion_binary_classifier](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/blob/main/notebooks/04_get_champion_binary_classifier.ipynb). The final version of the training script .py is also available [here](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/blob/main/scripts/train.py). The best iteration of XGBoost model achieved a GINI score of 0.8074 on the training set. The test predictions were submitted to Kaggle, where the Normalized Gini Coefficient scored 0.57895.
 
 Finally, the Flask service-related scripts and artifacts are stored [here](https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01/tree/main/scoring). Below, I have provided instructions on how to run the scoring process using a Dockerized setup.
 
@@ -45,13 +49,7 @@ Thank you for reading.
     ```bash
     $ git clone https://github.com/KonuTech/machine-learning-zoomcamp-capstone-01.git
     ```
-
-2. Install the pre-requisites necessary to run scoring app:
-
-    ```bash
-    $ pip install requrements.txt
-    ```
-3. Move to the scoring directory
+2. Move to the scoring directory
     ```bash
     $ cd scoring/
     ```
@@ -67,7 +65,7 @@ Thank you for reading.
     ```bash
     $ python predict.py
     ```
-5. From the local terminal run the script which scores two exemplary customers. One should be scored as Bad, the other as Good
+6. From the local terminal run the script which scores two exemplary customers. One should be scored as Bad, the other as Good
     ```bash
     $ cd scoring/
     $ python predict-test.py
@@ -77,7 +75,14 @@ The output shoud looks as the one on below screen shot:
 
 <img src="notebooks/exemplary_scoring_output.jpg" width="60%"/>
 
-
+In case of troubles with missing libraries, try installing Pipenv first and then install the requirements from the .txt file. Activate the Pipenv shell as well. Possible steps are as follows:
+```bash
+$ pip install pipenv
+$ source venv/Scripts/activate
+$ pipenv shell
+$ pip install -r requirements.txt
+```
+You might also need to have Docker Desktop for Windows installed, ensure virtualization is allowed in your BIOS, and configure other necessary settings. For more details, please check [here](https://docs.docker.com/desktop/install/windows-install/)
 
 ------------
 
