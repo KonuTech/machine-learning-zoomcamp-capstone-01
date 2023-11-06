@@ -1,0 +1,64 @@
+Project Structure:
+|-- data/ (directory)
+    |-- parquet_partitions/ (directory)
+    |-- sample_submission.csv
+    |-- submission_2023-11-01_17-54-58.csv
+    |-- submission_2023-11-01_20-08-34.csv
+    |-- submission_2023-11-04_18-06-41.csv
+    |-- submission_2023-11-05_14-54-16.bin.csv
+|-- eda/ (directory)
+    |-- histograms/ (directory)
+|-- models/ (directory)
+    |-- grid_search_results_2023-11-01_17-54-58.json
+    |-- grid_search_results_2023-11-01_20-08-34.json
+    |-- grid_search_results_2023-11-02_16-48-32.json
+    |-- grid_search_results_2023-11-04_18-06-41.json
+    |-- grid_search_results_2023-11-05_14-54-16.json
+    |-- grid_search_results_2023-11-05_22-12-26.json
+    |-- LogisticRegression_2023-11-01_17-54-58.bin
+    |-- LogisticRegression_2023-11-01_20-08-34.bin
+    |-- LogisticRegression_2023-11-02_16-48-32.bin
+    |-- LogisticRegression_2023-11-04_18-06-41.bin
+    |-- LogisticRegression_2023-11-05_14-54-16.bin
+    |-- LogisticRegression_2023-11-05_22-12-26.bin
+    |-- XGBoost_2023-11-01_17-54-58.bin
+    |-- XGBoost_2023-11-01_20-08-34.bin
+    |-- XGBoost_2023-11-02_16-48-32.bin
+    |-- XGBoost_2023-11-04_18-06-41.bin
+    |-- XGBoost_2023-11-05_14-54-16.bin
+    |-- XGBoost_2023-11-05_22-12-26.bin
+|-- notebooks/ (directory)
+    |-- 01_prepare_train_data.ipynb
+    |-- 02_eda.ipynb
+    |-- 03_downsample_data.ipynb
+    |-- 04_get_champion_binary_classifier.ipynb
+    |-- 05_prepare_test_data.ipynb
+    |-- 06_score_test_data.ipynb
+    |-- dict_vectorizer.pkl
+    |-- exemplary_scoring_output.jpg
+|-- scoring/ (directory)
+    |-- imputer.pkl
+    |-- training_log.log
+    |-- dict_vectorizer.pkl
+    |-- Dockerfile
+    |-- example_bad_customer.json
+    |-- example_good_customer.json
+    |-- imputer.pkl
+    |-- predict-test.py
+    |-- predict.py
+    |-- requirements.txt
+    |-- XGBoost_2023-11-05_14-54-16.bin
+|-- scripts/ (directory)
+    |-- correlation.py
+    |-- project_tree.py
+    |-- train.py
+|-- .git/ (directory)
+|-- .gitignore
+|-- Pipfile
+|-- Pipfile.lock
+|-- project_structure.txt
+|-- README.md
+|-- requirements.txt
+|-- requirements_dev.txt
+|-- temp.txt
+|-- training_log.log
